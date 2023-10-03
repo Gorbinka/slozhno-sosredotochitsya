@@ -4,6 +4,47 @@
   переключая тему
 */
 
+:root.page.theme_light {
+  --shadow-title-color:#ff0070;/*Цвет тени заголовка h1 и заголовка в footer*/
+  --accent-color:#fff1f7;/**/
+  --button-color:#353430;/*Цвет кнопок*/
+  --font-accent__color:#353430;/*Цвет шрифта типа 1*/
+  --font-add__color:#353430;/*Цвет шрифта типа 2*/
+  --shadow-text-color:#FF8DCB;/*Цвет тени у ссылок*/
+  --hover-color:#adadad;/*Цвет у кнопок смены темы при наведении*/
+  --outline-color:#353430;/*Цвет аутлайна для кнопок*/
+  --title-color:#FFC2E6;/*Цвет заголовка h1 и заголовка в footer*/
+  --paragraph-color:#353430;/*Цвет шрифта в абзацах*/
+  --background-main__color:#FFF1F7;/*Цвет заднего фона всей страницы*/
+  --background-text__color:#FF8DCB;/*Цвет заднего фона у заголовков*/
+  --main-font: 'IBM Plex mono', sans-serif;/*Семейство шрифтов страницы*/
+  --corner-color:#353430;/*Цвет уголков у футера и хедера*/
+  --shadow-links:#ff8dcb;/*Цвет тени у ссылок*/
+  --background-image:url(../images/cover-image-light.png);/*Изображение на заднем фоне*/
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color:#fff1f7;/**/
+    --button-color:#353430;/*Цвет кнопок*/
+  --font-accent__color:#353430;/*Цвет шрифта типа 1*/
+  --font-add__color:#353430;/*Цвет шрифта типа 2*/
+  --shadow-text-color:#FF8DCB;/*Цвет тени у ссылок*/
+  --hover-color:#adadad;/*Цвет у кнопок смены темы при наведении*/
+  --outline-color:#353430;/*Цвет аутлайна для кнопок*/
+  --title-color:#FFC2E6;/*Цвет заголовка h1 и заголовка в footer*/
+  --paragraph-color:#353430;/*Цвет шрифта в абзацах*/
+  --background-main__color:#FFF1F7;/*Цвет заднего фона всей страницы*/
+  --background-text__color:#FF8DCB;/*Цвет заднего фона у заголовков*/
+  --main-font: 'IBM Plex mono', sans-serif;/*Семейство шрифтов страницы*/
+  --corner-color:#353430;/*Цвет уголков у футера и хедера*/
+  --shadow-links:#ff8dcb;/*Цвет тени у ссылок*/
+  --background-image:url(../images/cover-image-light.png);/*Изображение на заднем фоне*/
+  }
+}
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

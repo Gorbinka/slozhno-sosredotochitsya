@@ -4,7 +4,41 @@
   переключая тему
 */
 
+:root.page.theme_dark {
+  --accent-color:#ff0070;/**/
+  --button-color:#ff0070;/*Цвет кнопок */
+  --font-accent__color:#ff0070;/*Цвет шрифта типа 1*/
+  --font-add__color:#000028;/*Цвет шрифта типа 2*/
+  --shadow-text-color:#ff0070;/*Цвет тени у ссылок*/
+  --hover-color:#ff0070;/*Цвет у кнопок при наведении*/
+  --outline-color:#ff0070;/*Цвет аутлайна для кнопок*/
+  --title-color:#DB00FF;/*Цвет заголовка h1 и заголовка в footer*/
+  --paragraph-color:#F1B2CE;/*Цвет шрифта в абзацах*/
+  --background-main__color:#000028;/*Цвет заднего фона всей страницы*/
+  --background-text__color:#ff0070;/*Цвет заднего фона у заголовков*/
+  --main-font: 'IBM Plex mono', sans-serif;/*Семейство шрифтов страницы*/
+  --corner-color:#ff0070;/*Цвет уголков у футера и хедера*/
+  --shadow-links:#ff0070;/*Цвет тени у ссылок*/
+  --background-image:url(../images/cover-image-dark.png);/*Изображение на заднем фоне*/
+}
+
 .page.theme_dark {
+
+  --accent-color:#ff0070;/**/
+  --button-color:#ff0070;/*Цвет кнопок */
+  --font-accent__color:#ff0070;/*Цвет шрифта типа 1*/
+  --font-add__color:#000028;/*Цвет шрифта типа 2*/
+  --shadow-text-color:#ff0070;/*Цвет тени у ссылок*/
+  --hover-color:#ff0070;/*Цвет у кнопок при наведении*/
+  --outline-color:#ff0070;/*Цвет аутлайна для кнопок*/
+  --title-color:#DB00FF;/*Цвет заголовка h1 и заголовка в footer*/
+  --paragraph-color:#F1B2CE;/*Цвет шрифта в абзацах*/
+  --background-main__color:#000028;/*Цвет заднего фона всей страницы*/
+  --background-text__color:#ff0070;/*Цвет заднего фона у заголовков*/
+  --main-font: 'IBM Plex mono', sans-serif;/*Семейство шрифтов страницы*/
+  --corner-color:#ff0070;/*Цвет уголков у футера и хедера*/
+  --shadow-links:#ff0070;/*Цвет тени у ссылок*/
+  --background-image:url(../images/cover-image-dark.png);/*Изображение на заднем фоне*/
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
