@@ -1,36 +1,45 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
-.page {
+ .page {
   background: var(--background-main__color,#000028);
   background-image: var(--background-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
    background-attachment: fixed;
-   padding:10px;
-   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+   padding: 10px;
+    margin:0 auto;
+   max-width: 1024px;
+   min-width:375px;
  }
  
  /*  МЕДИАЗАПРОС ДЛЯ ВСЕЙ СТРАНИЦЫ  */
- @media (min-width:768px) {
+ @media (min-width: 768px) {
+
    .page {
-     padding:20px;
+     padding: 20px;
    }
+
+ }
+
+ @media (min-width: 1024px) {
+
+.page {
+  max-width:1024px;
+}
+
  }
  
  .header {
-   height:100vh;
+   height: 100vh;
    min-block-size: 100vh;
-   display:grid;
+   display: grid;
    grid-template-rows: 1fr min-content 1fr;
    padding-bottom: 10px;
+   position: relative;
  }
  
  .header::before {
-   content:"";
+   content: "";
    position: absolute;
-   right:10px;
-   top:10px;
    border-right: 1px solid var(--corner-color, #ff0070);
    border-top: 1px solid var(--corner-color,#ff0070);
    inline-size: 25px;
@@ -38,10 +47,8 @@
  }
  
  .header::after {
-   content:"";
+   content: "";
    position: absolute;
-   left:10px;
-   bottom:10px;
    border-bottom: 1px solid var(--corner-color, #ff0070);
    border-left: 1px solid var(--corner-color,#ff0070);
    inline-size: 25px;
@@ -50,34 +57,34 @@
  
  .rec {
    position: absolute;
-   right:0px;
-   top:0px;
+   right: 0px;
+   top: 0px;
  }
  
  .rec::before {
-   content:"REC";
-   position:absolute;
-   right:40px;
-   top:10px;
-   color:var(--accent-color,#ff0070);
+   content: "REC";
+   position: absolute;
+   right: 40px;
+   top: 10px;
+   color: var(--accent-color,#ff0070);
    font-family: var(--main-font);
    font-size: 18px;
    font-style: normal;
    font-weight: 400;
-   line-height: 138.889%;
+   line-height: 139%;
  }
  
  .rec::after {
-   content:"";
+   content: "";
+   position: absolute;
    display: block;
-   height:9px;
-   width:9px;
+   height: 9px;
+   width: 9px;
    background-color: var(--accent-color, #ff0070);
    border-radius: 50%;
    box-shadow: 0px 0px 4px var(--accent-color,#FF0070);
-   position:absolute;
-   right:20px;
-   top:20px;
+   right: 20px;
+   top: 20px;
  }
  
  .header__theme-menu {
@@ -87,16 +94,16 @@
  }
  
  .header__theme-menu-list {
-   display:flex;
+   display: flex;
    flex-direction: column;
    justify-items: center;
    align-items: flex-end;
-   gap:13px
+   gap: 13px
  }
  
  .header__theme-menu-item {
-   display:inline;
-   padding:0 13px;
+   display: inline;
+   
  }
  
  .header__theme-menu-button {
@@ -107,50 +114,53 @@
    font-style: normal;
    font-weight: 400;
    line-height: 100%;
-   padding:0 13px;
-   background:none;
-   border:none;
-   margin:0;
+   padding: 0 13px;
+   background: none;
+   border: none;
+   margin: 0;
    cursor: pointer;
  }
  
+ .header__theme-menu-button_active {
+   border: 1px solid var(--outline-color);
+   pointer-events: none;
+ }
+
  .header__theme-menu-button:focus {
-   outline:none;
+   outline: none;
  }
  
  .header__theme-menu-button:focus-visible {
-   border-bottom:1px solid var(--hover-color,#FF0070);
+   border-bottom: 1px solid var(--hover-color,#FF0070);
  }
  
  .header__theme-menu-button:hover {
-   outline:1px solid var(--outline-color,#FF0070);
+   outline: 1px solid var(--outline-color,#FF0070);
  }
  
  .header__title {
-   width:355px;
+   max-width: 355px;
    justify-self: start;
    align-self: center;
- }
- 
- h1 {
    overflow-wrap: normal;
    color: var(--title-color,#DB00FF);
-   text-shadow: 4px 4px 0px var(--shadow-title-color,#FF0070);
-   font-family:var(--main-font);
+   text-shadow: 4px 4px 0px var(--shadow-title-color-type2,#FF0070);
+   font-family: var(--main-font);
    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
    font-style: normal;
    font-weight: 700;
-   line-height: 82.5%; /* 95.7px */
- }
- 
- .header__bottom {
+   line-height: 82.5%;
+  }
+  
+  .header__bottom {
    display: flex;
    flex-direction: column;
    align-self: center;
    justify-self: end;
-   width:355px;
- }
- 
+   max-width: 355px;
+   white-space: pre-wrap;
+  }
+  
  .header__bottom-text {
    color: #000028;
    font-family: var(--main-font);
@@ -158,29 +168,53 @@
    font-style: normal;
    font-weight: 700;
    line-height: 130%;
-   /* letter-spacing: 1px; */
    background-color: var(--background-text__color,#FF0070);
- }
- 
+  }
+  
+  .text__section {
+   display: grid;
+   gap: 50px;
+  }
+  
+  .text__section-box {
+   display: grid;
+   gap: 10px;
+   margin-top: 20px;
+  }
+
+  h2 {
+   color: var( --font-accent__color,#FF0070);
+   font-family: var(--main-font);
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 130%;
+  }
+
  /*  МЕДИАЗАПРОС ДЛЯ header для планшетов */
- @media (min-width:768px) {
+ @media (min-width: 768px) {
  
    .header {
      padding-bottom: 20px;
    }
  
- .header__title {
-   width:auto;
+   .header__title {
+     max-width: 759px;
+     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
  }
  
    .header__bottom {
-     width:364px;
+     max-width: 364px;
    }
  
-   h1 {
-     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-   }
- 
+   .text__section {
+     gap: 80px;
+  }
+
+  .text-transform {
+     max-width:236px;
+  }
+
  }
  
  /*  МЕДИАЗАПРОС ДЛЯ header для компьютеров */
@@ -193,89 +227,66 @@
    
    .header__theme-menu-list {
      flex-direction: row;
-     gap:10px
+     gap: 10px
    }
  
    .header__title {
-     width:auto;
+     max-width: 759px;
+     text-shadow: 4px 4px 0px var(--shadow-title-color,#FF0070);
    }
  
    .header__bottom {
-     width:491px;
+     max-width: 491px;
    }
  
  }
  
- .text__section {
-   display: grid;
-   gap:50px;
- }
- 
- .text__section-box {
-   display:grid;
-   gap:10px;
-   margin-top:20px;
- }
- 
  .more-gap {
-   margin-top:20px;
+   margin-top: 20px;
  }
- 
- h2 {
-   color:var( --font-accent__color,#FF0070);
-   font-family: var(--main-font);
-   font-size: 18px;
-   font-style: normal;
-   font-weight: 700;
-   line-height: 130%;
- }
- 
+  
  .in__pictures {
    background-color: var(--accent-color,#FF0070);
    color: #000028;
-   font-family:var(--main-font);
+   font-family: var(--main-font);
    font-size: 18px;
-   font-style:normal;
+   font-style: normal;
    font-weight: 700;
  }
  
  h3 {
    color: #000028;
-   font-family:var(--main-font);
+   font-family: var(--main-font);
    font-size: 18px;
-   font-style:normal;
+   font-style: normal;
    font-weight: 700;
-   line-height:130%;
+   line-height: 130%;
    background-color: var(--background-text__color,#FF0070);
  }
  
  .main__info {
    color: var(--paragraph-color,#F1B2CE);
-   font-family:var(--main-font);
+   font-family: var(--main-font);
    font-size: 18px;
    font-style: normal;
    font-weight: 400;
    line-height: 130%;
  }
  
- .low__height {
-   max-height:23.4px;
- }
  
  .why_is_it_difficult {
    display: grid;
    margin-top: 40px;
- }
- 
- /*  МЕДИАЗАПРОС ДЛЯ ПЕРВОЙ СЕКЦИИ С ТЕКСТОМ  */
- @media (min-width:768px) {
+  }
+  
+  /*  МЕДИАЗАПРОС ДЛЯ ПЕРВОЙ СЕКЦИИ С ТЕКСТОМ  */
+  @media (min-width:768px) {
  
    .why_is_it_difficult {
-     /* grid-template-columns: repeat( 3 , 1 / 3 * (100vw - 40px) ); */
-     grid-template-columns: repeat( 3 , 1fr);
+     grid-template-columns:1.05fr repeat(2, 1fr);
      grid-template-rows: repeat(2 , auto);
-     grid-column-gap:20px;
-   row-gap: 20px;
+     grid-column-gap: 20px;
+     row-gap: 20px;
      }
    
    .why_is_it_difficult > h2 {
@@ -294,38 +305,47 @@
    }
    
    .text__section-box {
-     margin-top:0;
-   }
- 
+     margin-top: 0;
+    }
+    
+  }
+  
+  @media (min-width:1024px) {
+
+   .why_is_it_difficult {
+     grid-template-columns:1fr repeat(2, 1fr);
+    }
+
  }
- 
+
+
  .what_reduces {
    display: grid;
  }
  
  /*  МЕДИАЗАПРОС ДЛЯ ВТОРОЙ СЕКЦИИ С ТЕКСТОМ  */
  @media (min-width:768px) {
- 
+   
    .what_reduces {
      grid-template-columns: repeat( 3 , 1fr);
      grid-template-rows: repeat(4 , auto);
      row-gap:20px;
-   }
- 
-   .what_reduces > h2 {
+    }
+    
+    .what_reduces > h2 {
      grid-row: 1 / span 1;
      grid-column: 1 / span 1;
-   }
-   
-   .what_reduces > .text__section-box:nth-of-type(1) {
-     grid-row: 2 / span 1;
-     grid-column: 1 / span 3 ;
+    }
+    
+    .what_reduces > .text__section-box:nth-of-type(1) {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3 ;
    }
    
    .what_reduces > .text__section-box:nth-of-type(2) {
      grid-row: 3 / span 1;
      grid-column: 1 / span 3 ;
-   }
+    }
  
    .what_reduces > .text__section-box:nth-of-type(3) {
      grid-row: 4 / span 1;
@@ -336,14 +356,24 @@
  
  /*  МЕДИАЗАПРОС ДЛЯ ВТОРОЙ СЕКЦИИ С ТЕКСТОМ (только уже для большего расширения)  */
  @media (min-width:1024px) {
- 
+   
    .what_reduces {
-     grid-template-columns: repeat( 3 , 1fr);
+     grid-template-columns: repeat(3 , 1fr);
      grid-template-rows: repeat(2 , auto);
-     gap:20px;
+     gap: 20px;
    }
- 
-   .what_reduces > h2 {
+
+   .text__reduce__section-box{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .text-transform {
+     min-width:315px;
+    }
+    
+    
+    .what_reduces > h2 {
      grid-row: 1 / span 1;
      grid-column: 1 / span 1;
    }
@@ -362,51 +392,22 @@
      grid-row: 2 / span 1;
      grid-column: 3 / span 1;
    }
- 
-   /* .what_reduces > .text__section-box:nth-of-type(1) > h3 {
-     grid-row: 2 / span 1;
-     grid-column: 1 / span 1;
-   }
- 
-   .what_reduces > .text__section-box:nth-of-type(2) > h3 {
-     grid-row: 2 / span 1;
-     grid-column: 2 / span 1;
-   }
- 
-   .what_reduces > .text__section-box:nth-of-type(3) > h3 {
-     grid-row: 2 / span 1;
-     grid-column: 3 / span 1;
-   }
-   
-   .what_reduces > .text__section-box:nth-of-type(1) > .main__info {
-     grid-row: 3 / span 1;
-     grid-column: 1 / span 1 ;
-   }
-   
-   .what_reduces > .text__section-box:nth-of-type(2) > .main__info {
-     grid-row: 3 / span 1;
-     grid-column: 2 / span 1 ;
-   }
- 
-   .what_reduces > .text__section-box:nth-of-type(3) > .main__info {
-     grid-row: 3 / span 1;
-     grid-column: 3 / span 1 ;
-   } */
- 
+  
  }
  
  .how_to_do {
    display: grid;
-   margin-bottom:50px;
+   margin-bottom: 50px;
  }
  
  /*  МЕДИАЗАПРОС ДЛЯ ТРЕТЬЕЙ СЕКЦИИ С ТЕКСТОМ  */
  @media (min-width:768px) {
  
    .how_to_do {
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns:1.05fr 1fr 1fr;
      grid-template-rows: repeat(6, auto);
-     gap:20px;
+     row-gap: 20px;
+     column-gap: 25px;
    }
  
  .how_to_do > h2 {
@@ -445,20 +446,27 @@
  }
  
  .more-gap {
-   margin-top:0;
+   margin-top: 0;
  }
  
  }
  
- 
- 
+/*  МЕДИАЗАПРОС ДЛЯ ТРЕТЬЕЙ СЕКЦИИ С ТЕКСТОМ  */
+@media (min-width:1024px) {
+
+  .how_to_do {
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+}
+
  .low-weight {
    font-weight: 400;
  }
  
  .shadow__text {
    text-decoration: none;
-   text-shadow:2px 1px 0px var(--shadow-links,#FF0070);
+   text-shadow: 2px 1px 0px var(--shadow-links,#FF0070);
  }
  
  .shadow__text:hover {
@@ -466,11 +474,11 @@
  }
  
  .shadow__text:focus {
-   outline:none;
+   outline: none;
  }
  
  .shadow__text:focus-visible {
-   outline:1px solid var(--paragraph-color, #F1B2CE);
+   outline: 1px solid var(--paragraph-color, #F1B2CE);
  }
  
  .gallery {
@@ -478,30 +486,35 @@
  }
  
  .gallery__title {
-   margin-bottom:10px;
+   margin-bottom: 10px;
    background-color: var(--background-text__color, #ff0070);
-   color:var(--font-accent__color,#000028);
+   color: var(--font-add__color,#000028);
    font-family: var(--main-font);
    font-size: 18px;
    font-style: normal;
    font-weight: 700;
-   line-height:  130%;
+   line-height: 130%;
  }
  
  .images {
    display: grid;
    grid-template-columns: minmax(355px, 1fr);
-   gap:10px;
+   gap: 10px;
  }
  
  img {
-   width:100%;
-   height:100%;
+   width: 100%;
+   height: 100%;
    object-fit: cover;
+   object-position: center;
  }
  
  /*  МЕДИАЗАПРОСЫ ДЛЯ ПЛАНШЕТОВ( для сетки с картинками )  */
- @media (min-width:768px) {
+ @media (min-width: 768px) {
+
+  .gallery {
+ margin-top:30px;
+  }
  
    .images {
      gap:20px;
@@ -532,33 +545,46 @@
    img:nth-of-type(5) {
      grid-area: street;
    }
- }
- 
+
+   .gallery__title {
+    margin-bottom: 20px;
+  }
+   
+  }
+  
+  @media (min-width: 1024px) {
+    
+    .gallery__title {
+      margin-bottom: 20px;
+    }
+  
+  }
+
  .footer {
-   height:100vh;
+   height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding-top:10px;
+   padding-top: 10px;
    position: relative;
  }
  
  .footer::before {
-   content:"";
+   content: "";
    position: absolute;
    border-right: 1px solid var(--corner-color, #ff0070);
    border-top: 1px solid var(--corner-color,#ff0070);
    inline-size: 25px;
    block-size: 25px;
-   right:0px;
-   top:20px;
+   right: 0px;
+   top: 20px;
  }
    
  .footer::after {
-  content:"";
+  content: "";
   position: absolute;
-   left:0px;
-   bottom:0px;
+   left: 0px;
+   bottom: 0px;
    border-bottom: 1px solid var(--corner-color, #ff0070);
    border-left: 1px solid var(--corner-color,#ff0070);
    inline-size: 25px;
@@ -567,9 +593,9 @@
  
  .footer__title {
    overflow-wrap: normal;
-   color:var(--title-color,#DB00FF);
+   color: var(--title-color,#DB00FF);
    text-shadow: 2px 2px 0px var( --shadow-title-color,#FF0070);
-   font-family:var(--main-font);
+   font-family: var(--main-font);
    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
    font-style: normal;
    font-weight: 700;
@@ -577,50 +603,97 @@
  }
  
  /*  МЕДИАЗАПРОС ДЛЯ footer  */
- @media (min-width:768px) {
+ @media (min-width: 768px) {
  
    .footer {
-     padding-top:20px;
+     padding-top: 20px;
    }
  
    .footer__title {
      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
    }
  
- 
  }
  
  /*  МЕДИАЗАПРОС ДЛЯ ПСЕВДОЭЛЕМЕНТОВ И ДЕКОРАТИВНЫХ ЭЛЕМЕНТОВ footer И header  */
- @media (min-width:768px) {
+ @media (min-width: 375px) {
+ 
+  .header::before {
+    right: 0px;
+    top: 0px;
+  }
+    
+  .header::after {
+    left: 0px;
+    bottom: 20px;
+  }
+
+  .rec::before {
+    right: 30px;
+    top: 2px;
+  }
+    
+  .rec::after {
+   right: 10px;
+   top: 10px;
+  }
+
+  .footer::before {
+    right: 0px;
+    top: 40px;
+  }
+      
+  .footer::after {
+    left: 0px;
+    bottom: 0px;
+  } 
+
+}
+
+ @media (min-width: 768px) {
  
    .header::before {
-     right:20px;
-     top:20px;
+     right: 0px;
+     top: 0px;
    }
      
    .header::after {
-     left:20px;
-     bottom:20px;
+     left: 0px;
+     bottom: 40px;
    }
  
    .rec::before {
-     right:50px;
-     top:20px;
+     right: 30px;
+     top: 2px;
    }
      
    .rec::after {
-    right:30px;
-    top:30px;
+    right: 10px;
+    top: 10px;
    }
- 
-   .footer::before {
-     right:0px;
-     top:40px;
-   }
-       
-   .footer::after {
-     left:0px;
-     bottom:0px;
-   } 
  
  }
+
+ @media (min-width: 1024px) {
+ 
+  .header::before {
+    right: 0px;
+    top: 0px;
+  }
+    
+  .header::after {
+    left: 0px;
+    bottom: 40px;
+  }
+
+  .rec::before {
+    right: 30px;
+    top: 2px;
+  }
+    
+  .rec::after {
+   right: 10px;
+   top: 10px;
+  }
+
+}

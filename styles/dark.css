@@ -12,6 +12,7 @@
   --shadow-text-color:#ff0070;/*Цвет тени у ссылок*/
   --hover-color:#ff0070;/*Цвет у кнопок при наведении*/
   --outline-color:#ff0070;/*Цвет аутлайна для кнопок*/
+  --shadow-title-color-type2:#ff0070;/*Цвет тени у заголовка */
   --title-color:#DB00FF;/*Цвет заголовка h1 и заголовка в footer*/
   --paragraph-color:#F1B2CE;/*Цвет шрифта в абзацах*/
   --background-main__color:#000028;/*Цвет заднего фона всей страницы*/
@@ -31,6 +32,7 @@
   --shadow-text-color:#ff0070;/*Цвет тени у ссылок*/
   --hover-color:#ff0070;/*Цвет у кнопок при наведении*/
   --outline-color:#ff0070;/*Цвет аутлайна для кнопок*/
+  --shadow-title-color-type2:#ff0070;/*Цвет тени у заголовка */
   --title-color:#DB00FF;/*Цвет заголовка h1 и заголовка в footer*/
   --paragraph-color:#F1B2CE;/*Цвет шрифта в абзацах*/
   --background-main__color:#000028;/*Цвет заднего фона всей страницы*/

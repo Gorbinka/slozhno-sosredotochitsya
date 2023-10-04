@@ -11,6 +11,7 @@
   --font-accent__color:#353430;/*Цвет шрифта типа 1*/
   --font-add__color:#353430;/*Цвет шрифта типа 2*/
   --shadow-text-color:#FF8DCB;/*Цвет тени у ссылок*/
+  --shadow-title-color-type2:#FF8DCB;/*Цвет тени у заголовка */
   --hover-color:#adadad;/*Цвет у кнопок смены темы при наведении*/
   --outline-color:#353430;/*Цвет аутлайна для кнопок*/
   --title-color:#FFC2E6;/*Цвет заголовка h1 и заголовка в footer*/
@@ -32,6 +33,7 @@
   --font-accent__color:#353430;/*Цвет шрифта типа 1*/
   --font-add__color:#353430;/*Цвет шрифта типа 2*/
   --shadow-text-color:#FF8DCB;/*Цвет тени у ссылок*/
+  --shadow-title-color-type2:#FF8DCB;/*Цвет тени у заголовка */
   --hover-color:#adadad;/*Цвет у кнопок смены темы при наведении*/
   --outline-color:#353430;/*Цвет аутлайна для кнопок*/
   --title-color:#FFC2E6;/*Цвет заголовка h1 и заголовка в footer*/
